@@ -1,13 +1,18 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import "./effects.css";
+import Message from "./Message";
 const SimpleForm = () => {
   const [formState, setformState] = useState({
     name: "",
     email: "",
   });
   const { name, email } = formState;
-  // Important Note is the useEffect is listening in changes in my doc Like the extra [] is the state is looking in and will triger anything I put inside of it when something I expecting to change change
+  // Important Note is the useEffect is listening in changes in my doc Like the extra [] is the state is looking in and will triger anything I put inside of it when something I expecting to change change.
+
+  //------------------------------------------------
+  useEffect(() => {}, []);
+  //-----------------------------------------------
   useEffect(() => {
     // console.log("hey");
   }, []);
@@ -51,6 +56,7 @@ const SimpleForm = () => {
           onChange={handleInputChange}
         ></input>
       </div>
+      {name === "123" && <Message />}
     </>
   );
 };
