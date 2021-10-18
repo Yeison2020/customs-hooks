@@ -1,6 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import HookApp from "./HookApp";
+import SimpleForm from "./components/02-useEffect/SimpleForm";
+// import CounterWithCustomHook from "./components/01-useState/CounterWithCustomHook";
+// import HookApp from "./HookApp";
+// import CounterApp from "./components/01-useState/CounterApp";
 
-ReactDOM.render(<HookApp />, document.getElementById("app"));
+ReactDOM.render(<SimpleForm />, document.getElementById("app"));
