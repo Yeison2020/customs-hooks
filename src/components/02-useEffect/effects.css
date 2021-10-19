@@ -6,3 +6,11 @@ input,
 button {
   margin: 15px;
 }
+
+h1 {
+  text-align: center;
+}
+
+blockquote {
+  text-align: right;
+}

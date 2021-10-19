@@ -54,7 +54,7 @@ const FormWithCustomHook = () => {
             type="text"
             name="name"
             className="form-control"
-            placeholder="Your Name"
+            placeholder=""
             autoComplete="off"
             value={name}
             onChange={handleInputChange}
@@ -64,7 +64,7 @@ const FormWithCustomHook = () => {
             type="text"
             name="email"
             className="form-control"
-            placeholder="Your gmail@.com"
+            placeholder=""
             autoComplete="off"
             value={email}
             onChange={handleInputChange}
@@ -75,7 +75,8 @@ const FormWithCustomHook = () => {
             type="password"
             name="password"
             className="form-control"
-            placeholder="*******"
+            placeholder=""
+            autoComplete="off"
             value={password}
             onChange={handleInputChange}
           ></input>
