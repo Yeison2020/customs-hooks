@@ -11,6 +11,8 @@ import "./index.css";
 // import CounterApp from "./components/01-useState/CounterApp";
 // import LaOutEffect from "./components/05-LayoutEffect/LayOutEffect";
 // import Memorize from "./components/06-memo/Memorize";
-import MemoHook from "./components/06-memo/MemoHook";
+// import MemoHook from "./components/06-memo/MemoHook";
+// import CallbackHook from "./components/06-memo/CallbackHook";
+import Padre from "./components/07-tarea-memo/Padre";
 
-ReactDOM.render(<MemoHook />, document.getElementById("app"));
+ReactDOM.render(<Padre />, document.getElementById("app"));
