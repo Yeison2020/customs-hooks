@@ -9,6 +9,7 @@ import "./index.css";
 // import CounterWithCustomHook from "./components/01-useState/CounterWithCustomHook";
 // import HookApp from "./HookApp";
 // import CounterApp from "./components/01-useState/CounterApp";
-import LaOutEffect from "./components/05-LayoutEffect/LayOutEffect";
+// import LaOutEffect from "./components/05-LayoutEffect/LayOutEffect";
+import Memorize from "./components/06-memo/Memorize";
 
-ReactDOM.render(<LaOutEffect />, document.getElementById("app"));
+ReactDOM.render(<Memorize />, document.getElementById("app"));
