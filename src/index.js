@@ -10,6 +10,7 @@ import "./index.css";
 // import HookApp from "./HookApp";
 // import CounterApp from "./components/01-useState/CounterApp";
 // import LaOutEffect from "./components/05-LayoutEffect/LayOutEffect";
-import Memorize from "./components/06-memo/Memorize";
+// import Memorize from "./components/06-memo/Memorize";
+import MemoHook from "./components/06-memo/MemoHook";
 
-ReactDOM.render(<Memorize />, document.getElementById("app"));
+ReactDOM.render(<MemoHook />, document.getElementById("app"));
