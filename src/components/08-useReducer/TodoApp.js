@@ -1,17 +1,57 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useEffect } from "react";
 import "./styles.css";
 import todoReducer from "./todoReducer";
-const initialState = [
-  {
-    id: new Date().getTime(),
-    desc: "Aprender React",
-    done: false,
-  },
-];
+import useForm from "../../hooks/useForm";
+
+// There is a way the init is passsing the object inside of the reducer
+
+const init = () => {
+  return JSON.parse(localStorage.getItem("todos")) || [];
+  //   return
+  //     {
+  //       id: new Date().getTime(),
+  //       desc: "Become A Sofware Engineer",
+  //       done: false,
+  //     },
+  //   ];
+};
 
 const TodoApp = () => {
-  const [todos] = useReducer(todoReducer, initialState);
-  console.log(todos);
+  const [todos, dispatch] = useReducer(todoReducer, [], init);
+  const [{ description }, handleInputChange, reset] = useForm({
+    description: "",
+  });
+  // -----------------Adding useEffect
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
+
+  //------------------------------------------
+  console.log(description);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (description.trim().length <= 1) {
+      return;
+    }
+    const newTodo = {
+      id: new Date().getTime(),
+      desc: description,
+      done: false,
+    };
+
+    const action = {
+      type: "add",
+      payload: newTodo,
+    };
+
+    dispatch(action);
+    reset();
+  };
+
+  //------------------- Return ;
+
   return (
     <div>
       <h1>Todo App ({todos.length})</h1>
@@ -35,17 +75,19 @@ const TodoApp = () => {
         <div className="col-5">
           <h4>Agregar todo</h4>
           <hr />
-          <form>
+          <form onSubmit={handleSubmit}>
             <input
               type="text"
               name="description"
               placeholder="Aprender ...."
               autoComplete="off"
-              className="form-control"
+              className="form-control block"
+              onChange={handleInputChange}
+              value={description}
             ></input>
             <button
-              type="button"
-              className="btn btn-outline-primary mt-3 btn-block"
+              type="submit"
+              className="btn btn-outline-primary mt-2 btn-block"
             >
               Agregar
             </button>
