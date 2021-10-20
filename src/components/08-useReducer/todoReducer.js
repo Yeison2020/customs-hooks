@@ -6,6 +6,12 @@ const todoReducer = (state = [], action) => {
       return state.filter((todo) => {
         return todo.id !== action.payload;
       });
+    case "toggle":
+      return state.map((todo) => {
+        return todo.id === action.payload
+          ? { ...todo, done: !todo.done }
+          : todo;
+      });
     default:
       return state;
   }

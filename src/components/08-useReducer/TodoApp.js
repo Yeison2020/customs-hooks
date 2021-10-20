@@ -55,7 +55,12 @@ const TodoApp = () => {
     dispatch(action);
     reset();
   };
-
+  const handleToggle = (todoId) => {
+    dispatch({
+      type: "toggle",
+      payload: todoId,
+    });
+  };
   //------------------- Return ;
 
   return (
@@ -68,7 +73,10 @@ const TodoApp = () => {
             {todos.map((todo, i) => {
               return (
                 <li key={todo.id} className="list-group-item">
-                  <p className="text-center complete">
+                  <p
+                    className={`${todo.done && "complete"}`}
+                    onClick={() => handleToggle(todo.id)}
+                  >
                     {i + 1}. {todo.desc}
                   </p>
                   <button
