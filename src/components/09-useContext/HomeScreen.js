@@ -10,6 +10,7 @@ const HomeScreen = () => {
     <div>
       <h1>Home screen</h1>
       <hr />
+      <pre>{JSON.stringify(user, null, 3)}</pre>
     </div>
   );
 };

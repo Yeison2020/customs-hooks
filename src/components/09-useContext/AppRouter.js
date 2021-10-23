@@ -18,15 +18,17 @@ const AppRouter = () => {
     <Router>
       <div>
         <NavBar />
-        <Switch>
-          <Route exact={true} path="/" component={HomeScree} />
-          <Route exact path="/about" component={AboutScreen} />
-          <Route exact path="/logIn" component={LogInScreen} />
-          {/* <Route component={HomeScree}></Route> */}
-          {/* Here the meaning of Redirect is the User did not write the right
+        <div className="container">
+          <Switch>
+            <Route exact={true} path="/" component={HomeScree} />
+            <Route exact path="/about" component={AboutScreen} />
+            <Route exact path="/logIn" component={LogInScreen} />
+            {/* <Route component={HomeScree}></Route> */}
+            {/* Here the meaning of Redirect is the User did not write the right
           path. */}
-          <Redirect to="./"></Redirect>
-        </Switch>
+            <Redirect to="./"></Redirect>
+          </Switch>
+        </div>
       </div>
     </Router>
   );
