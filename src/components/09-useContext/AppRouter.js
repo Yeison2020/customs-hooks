@@ -9,10 +9,6 @@ const AppRouter = () => {
       <div>
         <Switch>
           <Route path="/about" component={AboutScreen} />
-        </Switch>
-      </div>
-      <div>
-        <Switch>
           <Route path="/logIn" component={LogInScreen} />
         </Switch>
       </div>
