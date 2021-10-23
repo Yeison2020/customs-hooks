@@ -23,6 +23,8 @@ const AppRouter = () => {
           <Route exact path="/about" component={AboutScreen} />
           <Route exact path="/logIn" component={LogInScreen} />
           {/* <Route component={HomeScree}></Route> */}
+          // Here the meaning of Redirect is the User did not write the right
+          path.
           <Redirect to="./"></Redirect>
         </Switch>
       </div>
