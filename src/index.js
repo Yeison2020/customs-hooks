@@ -15,8 +15,8 @@ import "./index.css";
 // // import CallbackHook from "./components/06-memo/CallbackHook";
 // import Padre from "./components/07-tarea-memo/Padre";
 // import TodoApp from "../src/components/08-useReducer/TodoApp";
-import Main from "./components/09-useContext/MainApp";
+import MainApp from "./components/09-useContext/MainApp";
 
-ReactDOM.render(<Main />, document.getElementById("app"));
+ReactDOM.render(<MainApp />, document.getElementById("app"));
 
 // import "./components/08-useReducer/intro-reducer";
