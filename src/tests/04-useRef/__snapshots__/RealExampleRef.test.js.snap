@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <RalExampleUseRef/> Should Macth with the snapShot 1`] = `<RealExampleRef />`;

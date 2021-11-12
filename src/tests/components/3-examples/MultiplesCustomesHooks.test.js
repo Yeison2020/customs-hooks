@@ -4,6 +4,7 @@ import Enzyme from "enzyme";
 import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
 import MultipleCustomsHooks from "../../../components/03-examples/MultipleCustomsHooks";
 import useFetch from "../../../hooks/useFetch";
+// This libray simulate the result of differents customs Hooks.
 jest.mock("../../../hooks/useFetch");
 Enzyme.configure({ adapter: new Adapter() });
 
