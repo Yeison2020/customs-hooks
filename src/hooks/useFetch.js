@@ -30,6 +30,13 @@ const useFetch = (url) => {
         } else {
           console.log("Nose llamo");
         }
+      })
+      .catch(() => {
+        setState({
+          data: null,
+          loading: false,
+          error: "We cound not load Your Information",
+        });
       });
   }, [url]);
 
