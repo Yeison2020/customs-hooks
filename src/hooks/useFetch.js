@@ -35,7 +35,7 @@ const useFetch = (url) => {
         setState({
           data: null,
           loading: false,
-          error: "We cound not load Your Information",
+          error: "Please try later information could not be found",
         });
       });
   }, [url]);
